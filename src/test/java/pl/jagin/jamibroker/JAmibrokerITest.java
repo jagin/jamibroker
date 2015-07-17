@@ -1,23 +1,20 @@
 package pl.jagin.jamibroker;
 
-import java.net.URL;
-import java.nio.file.Path;
-import java.nio.file.Paths;
-import java.util.Properties;
-
+import com.jacob.com.ComThread;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-
-import pl.jagin.jamibroker.junit.Order;
 import pl.jagin.jamibroker.JAmiBroker.Stocks;
 import pl.jagin.jamibroker.JAmiBroker.Stocks.Stock;
+import pl.jagin.jamibroker.junit.Order;
 import pl.jagin.jamibroker.junit.OrderedRunner;
 
-import com.jacob.com.ComThread;
+import java.net.URL;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 
-import static org.fest.assertions.Assertions.*;
+import static org.assertj.core.api.Assertions.assertThat;
 
 @RunWith(OrderedRunner.class)
 // Tests are triggered in order

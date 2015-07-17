@@ -1,16 +1,15 @@
 package pl.jagin.jamibroker;
 
-import java.util.Date;
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 import com.jacob.activeX.ActiveXComponent;
 import com.jacob.com.Dispatch;
 import com.jacob.com.Variant;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import java.util.Date;
 
 /**
- * This class is a wrapper for OLE automation interface of JAmiBroker application.
+ * This class is a wrapper for OLE automation interface of AmiBroker application.
  * For more details @see https://www.amibroker.com/guide/objects.html
  */
 public class JAmiBroker {
@@ -23,9 +22,9 @@ public class JAmiBroker {
 	private JAmiBroker() { dAmiBroker = new ActiveXComponent("Broker.Application"); }
 	
 	/**
-	 * The getInstance() method returns a reference to a JAmiBroker object, which can be used to execute JAmiBroker OLE methods.
+	 * The getInstance() method returns a reference to a JAmiBroker object, which can be used to execute AmiBroker OLE methods.
 	 * This method returns a singleton, so calling it twice in a row will return the same instance. 
-	 * @return
+	 * @return JAmiBroker
 	 */
 	public static JAmiBroker getInstance() {
 		if(instance == null) {
